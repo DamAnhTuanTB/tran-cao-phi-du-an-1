@@ -1,89 +1,369 @@
-import logoDark from "./logo-dark.svg";
-import logoLight from "./logo-light.svg";
+import { Link } from "react-router";
+import "./index.css";
+
+// Image imports
+import anhMoi from "./images/anh-moi.png";
+import anhAlptop3 from "./images/anh_alptop_3.png";
+import anhLaptop1 from "./images/anh_laptop_1.png";
+import anhLaptop2 from "./images/anh_laptop_2.png";
+import anhNguoiCongNghe from "./images/anh_nguoi_cong_nghe.png";
+import anhTo from "./images/anh_to.png";
+import icon1Fooder from "./images/icon-1-fooder.png";
+import icon2Fooder from "./images/icon-2-fooder.png";
+import icon3Fooder from "./images/icon-3-fooder.png";
+import iconBanTay from "./images/icon-ban-tay.png";
+import iconContent7 from "./images/icon-content-7.png";
+import iconLogo from "./images/icon-logo.png";
+import iconMayBay from "./images/icon-may-bay.png";
+import iconNgoiNha from "./images/icon-ngoi-nha.png";
+import iconNguoi from "./images/icon-nguoi.png";
+import iconNhoContent5 from "./images/icon-nho-content-5.png";
+import icon2Nguoi from "./images/icon_2_nguoi.png";
+import icon3BanTay from "./images/icon_3_ban_tay.png";
+import iconHopTaiNghe from "./images/icon_hop_tai_nghe.png";
+import iconNgonTay from "./images/icon_ngon_tay.png";
+import logo1 from "./images/logo-1.png";
+import logo2 from "./images/logo-2.png";
+import logo3 from "./images/logo-3.png";
+import logo4 from "./images/logo-4.png";
+import logo5 from "./images/logo-5.png";
+import logo6 from "./images/logo-6.png";
+import logoCo from "./images/logo-co.png";
+import logoIpsum from "./images/logo-ipsum.png";
+import logoMat from "./images/logo-mat.png";
+import logoQuat from "./images/logo-quat.png";
+import logoVong from "./images/logo-vong.png";
+import logoXoan from "./images/logo-xoan.png";
+import logo from "./images/logo.png";
+import manDangNhap from "./images/man-dang-nhap.png";
 
 export function Welcome() {
   return (
-    <main className="flex items-center justify-center pt-16 pb-4">
-      <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
-        <header className="flex flex-col items-center gap-9">
-          <div className="w-[500px] max-w-[100vw] p-4">
-            <img
-              src={logoLight}
-              alt="React Router"
-              className="block w-full dark:hidden"
-            />
-            <img
-              src={logoDark}
-              alt="React Router"
-              className="hidden w-full dark:block"
-            />
-          </div>
-        </header>
-        <div className="max-w-[300px] w-full space-y-6 px-4">
-          <nav className="rounded-3xl border border-gray-200 p-6 dark:border-gray-700 space-y-4">
-            <p className="leading-6 text-gray-700 dark:text-gray-200 text-center">
-              What&apos;s next?
-            </p>
-            <ul>
-              {resources.map(({ href, text, icon }) => (
-                <li key={href}>
-                  <a
-                    className="group flex items-center gap-3 self-stretch p-3 leading-normal text-blue-700 hover:underline dark:text-blue-500"
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {icon}
-                    {text}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
+    <>
+      {/* HEADER */}
+      <div className="header">
+        <div className="logo-header">
+          <img src={iconLogo} alt="" />
+          <div>Nexcent</div>
+        </div>
+
+        <div className="menu-header">
+          <div>Home</div>
+          <div>Service</div>
+          <div>Feature</div>
+          <div>Product</div>
+          <div>Testimonial</div>
+          <div>FAQ</div>
+        </div>
+
+        <div className="button-header">
+          <div className="button-one-header">Login</div>
+          <Link to="/sign-up" className="button-two-header">
+            Sign up
+          </Link>
         </div>
       </div>
-    </main>
+
+      {/* INTRODUCE */}
+      <div className="introduce">
+        <div className="title-introduce">
+          <div className="title-1-introduce">
+            <span>Lessons and insights</span>
+            <span>from 8 years</span>
+          </div>
+          <div>
+            Where to grow your business as a photographer: site or social media?
+          </div>
+          <div className="button-introduce">Register</div>
+        </div>
+        <div className="image-introduce">
+          <img src={anhNguoiCongNghe} alt="" />
+        </div>
+      </div>
+
+      <div className="charater">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      {/* CONTENT-1 */}
+      <div className="content-1">
+        <div className="title-content-1">Our Clients</div>
+        <div>We have been working with some Fortune 500+ clients</div>
+        <div className="logo-content-1">
+          <img src={logo} alt="" />
+          <img src={logo1} alt="" />
+          <img src={logo2} alt="" />
+          <img src={logo3} alt="" />
+          <img src={logo4} alt="" />
+          <img src={logo5} alt="" />
+          <img src={logo6} alt="" />
+        </div>
+      </div>
+
+      {/* CONTENT-2 */}
+      <div className="content-2">
+        <div className="title-content-2">
+          Manage your entire community in a single system
+        </div>
+        <div>Who is Nextcent suitable for?</div>
+        <div className="menu-content-2">
+          <div className="child-1-content-2">
+            <img src={iconNguoi} alt="" />
+            <div>Membership Organisations</div>
+            <div>
+              Our membership management software provides full automation of
+              membership renewals and payments
+            </div>
+          </div>
+          <div className="child-1-content-2">
+            <img src={iconNgoiNha} alt="" />
+            <div>National Associations</div>
+            <div>
+              Our membership management software provides full automation of
+              membership renewals and payments
+            </div>
+          </div>
+          <div className="child-1-content-2">
+            <img src={iconBanTay} alt="" />
+            <div>Clubs And Groups</div>
+            <div>
+              Our membership management software provides full automation of
+              membership renewals and payments
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Content-3 child-1 */}
+      <div className="content-3">
+        <div className="image-content-3">
+          <img src={manDangNhap} alt="" />
+        </div>
+        <div className="child-1-content-3">
+          <div className="title-content-3">
+            The unseen of spending three years at Pixelgrade
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+            amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
+            Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
+            tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
+            Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
+            elementum pulvinar odio.
+          </div>
+          <div className="button-content-3">Learn More</div>
+        </div>
+      </div>
+
+      {/* Content-4 */}
+      <div className="content-4">
+        <div className="title-content-4">
+          <div className="title-small-content-4">
+            <span>Helping a local</span>
+            <span>business reinvent itself</span>
+          </div>
+          <div>We reached here with our hard work and dedication</div>
+        </div>
+        <div className="child-2-content-4">
+          <div className="image-content-4">
+            <img src={icon2Nguoi} alt="" />
+            <div className="data">
+              <div>2,245,341</div>
+              <div>Members</div>
+            </div>
+          </div>
+          <div className="image-content-4">
+            <img src={icon3BanTay} alt="" />
+            <div className="data">
+              <div>46,328</div>
+              <div>Clubs</div>
+            </div>
+          </div>
+          <div className="image-content-4">
+            <img src={iconNgonTay} alt="" />
+            <div className="data">
+              <div>828,867</div>
+              <div>Event Bookings</div>
+            </div>
+          </div>
+          <div className="image-content-4">
+            <img src={iconHopTaiNghe} alt="" />
+            <div className="data">
+              <div>1,926,436</div>
+              <div>Payments</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Content-3 child-2 */}
+      <div className="content-3">
+        <div className="image-content-3">
+          <img src={anhMoi} alt="" />
+        </div>
+        <div className="child-1-content-3">
+          <div className="title-content-3">
+            How to design your site footer like we did
+          </div>
+          <div>
+            Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
+            augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque
+            elit erat a magna. Donec quis erat at libero ultrices mollis. In hac
+            habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi
+            facilisis finibus. In euismod augue vitae nisi ultricies, non
+            aliquet urna tincidunt. Integer in nisi eget nulla commodo faucibus
+            efficitur quis massa. Praesent felis est, finibus et nisi ac,
+            hendrerit venenatis libero. Donec consectetur faucibus ipsum id
+            gravida.
+          </div>
+          <div className="button-content-3">Learn More</div>
+        </div>
+      </div>
+
+      {/* Content-5 */}
+      <div className="content-5">
+        <div className="image-content-5">
+          <img src={anhTo} alt="" />
+        </div>
+        <div className="child-2-content-5">
+          <div>
+            Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
+            lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu
+            enim metus. Vivamus sed libero ornare, tristique quam in, gravida
+            enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit
+            at ligula molestie, nec molestie mi blandit. Suspendisse cursus
+            tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse
+            eget lorem eu turpis vestibulum pretium. Suspendisse potenti.
+            Quisque malesuada enim sapien, vitae placerat ante feugiat eget.
+            Quisque vulputate odio neque, eget efficitur libero condimentum id.
+            Curabitur id nibh id sem dignissim finibus ac sit amet magna.
+          </div>
+          <div>Tim Smith</div>
+          <div>British Dragon Boat Racing Association</div>
+          <div className="logo-content-5">
+            <img src={logoQuat} alt="" />
+            <img src={logoMat} alt="" />
+            <img src={logoCo} alt="" />
+            <img src={logoIpsum} alt="" />
+            <img src={logoVong} alt="" />
+            <img src={logoXoan} alt="" />
+            <div className="link">
+              <div>Meet all customers</div>
+              <img src={iconNhoContent5} alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CONTENT-6 */}
+      <div className="content-6">
+        <div className="title-content-6">Caring is the new marketing</div>
+        <div>
+          The Nexcent blog is the best place to read about the latest membership
+          insights, trends and more. See who's joining the community, read about
+          how our community are increasing their membership income and lot's
+          more.​
+        </div>
+        <div className="menu-content-6">
+          <div className="child-1-content-6">
+            <img src={anhLaptop1} alt="" />
+            <div className="content-image">
+              <div>Creating Streamlined Safeguarding Processes with OneRen</div>
+              <div className="link">
+                <div>Readmore</div>
+                <img src={iconNhoContent5} alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div className="child-1-content-6">
+            <img src={anhLaptop2} alt="" />
+            <div className="content-image">
+              <div>
+                What are your safeguarding responsibilities and how can you
+                manage them?
+              </div>
+              <div className="link">
+                <div>Readmore</div>
+                <img src={iconNhoContent5} alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div className="child-1-content-6">
+            <img src={anhAlptop3} alt="" />
+            <div className="content-image">
+              <div>Revamping the Membership Model with Triathlon Australia</div>
+              <div className="link">
+                <div>Readmore</div>
+                <img src={iconNhoContent5} alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CONTENT-7 */}
+      <div className="content-7">
+        <div className="title-content-7">
+          Pellentesque suscipit fringilla libero eu.
+        </div>
+        <div className="button-content-7">
+          <div>Get a Demo</div>
+          <img src={iconContent7} alt="" />
+        </div>
+      </div>
+
+      {/* FOODER */}
+      <div className="fooder">
+        <div className="child-1-fooder">
+          <div className="logo-fooder">
+            <img src={iconLogo} alt="" />
+            <div>Nexcent</div>
+          </div>
+          <div>
+            <div>Copyright © 2020 Nexcent ltd.</div>
+            <div>All rights reserved</div>
+          </div>
+          <div className="icon-fooder">
+            <img src={icon1Fooder} alt="" />
+            <img src={icon2Fooder} alt="" />
+            <img src={icon3Fooder} alt="" />
+            <img src={icon1Fooder} alt="" />
+          </div>
+        </div>
+        <div className="child-2-fooder">
+          <div className="menu-fooder">
+            <div>Company</div>
+            <div>About us</div>
+            <div>Blog</div>
+            <div>Contact us</div>
+            <div>Pricing</div>
+            <div>Testimonials</div>
+          </div>
+          <div className="menu-fooder">
+            <div>Support</div>
+            <div>Help center</div>
+            <div>Terms of service</div>
+            <div>Legal</div>
+            <div>Privacy policy</div>
+            <div>Status</div>
+          </div>
+          <div className="menu-fooder">
+            <div>Stay up to date</div>
+            <div className="input-fooder">
+              <input
+                type="email"
+                placeholder="Your email address"
+                className="input-text"
+              />
+              <img src={iconMayBay} alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
-
-const resources = [
-  {
-    href: "https://reactrouter.com/docs",
-    text: "React Router Docs",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
-        className="stroke-gray-600 group-hover:stroke-current dark:stroke-gray-300"
-      >
-        <path
-          d="M9.99981 10.0751V9.99992M17.4688 17.4688C15.889 19.0485 11.2645 16.9853 7.13958 12.8604C3.01467 8.73546 0.951405 4.11091 2.53116 2.53116C4.11091 0.951405 8.73546 3.01467 12.8604 7.13958C16.9853 11.2645 19.0485 15.889 17.4688 17.4688ZM2.53132 17.4688C0.951566 15.8891 3.01483 11.2645 7.13974 7.13963C11.2647 3.01471 15.8892 0.951453 17.469 2.53121C19.0487 4.11096 16.9854 8.73551 12.8605 12.8604C8.73562 16.9853 4.11107 19.0486 2.53132 17.4688Z"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-      </svg>
-    ),
-  },
-  {
-    href: "https://rmx.as/discord",
-    text: "Join Discord",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="20"
-        viewBox="0 0 24 20"
-        fill="none"
-        className="stroke-gray-600 group-hover:stroke-current dark:stroke-gray-300"
-      >
-        <path
-          d="M15.0686 1.25995L14.5477 1.17423L14.2913 1.63578C14.1754 1.84439 14.0545 2.08275 13.9422 2.31963C12.6461 2.16488 11.3406 2.16505 10.0445 2.32014C9.92822 2.08178 9.80478 1.84975 9.67412 1.62413L9.41449 1.17584L8.90333 1.25995C7.33547 1.51794 5.80717 1.99419 4.37748 2.66939L4.19 2.75793L4.07461 2.93019C1.23864 7.16437 0.46302 11.3053 0.838165 15.3924L0.868838 15.7266L1.13844 15.9264C2.81818 17.1714 4.68053 18.1233 6.68582 18.719L7.18892 18.8684L7.50166 18.4469C7.96179 17.8268 8.36504 17.1824 8.709 16.4944L8.71099 16.4904C10.8645 17.0471 13.128 17.0485 15.2821 16.4947C15.6261 17.1826 16.0293 17.8269 16.4892 18.4469L16.805 18.8725L17.3116 18.717C19.3056 18.105 21.1876 17.1751 22.8559 15.9238L23.1224 15.724L23.1528 15.3923C23.5873 10.6524 22.3579 6.53306 19.8947 2.90714L19.7759 2.73227L19.5833 2.64518C18.1437 1.99439 16.6386 1.51826 15.0686 1.25995ZM16.6074 10.7755L16.6074 10.7756C16.5934 11.6409 16.0212 12.1444 15.4783 12.1444C14.9297 12.1444 14.3493 11.6173 14.3493 10.7877C14.3493 9.94885 14.9378 9.41192 15.4783 9.41192C16.0471 9.41192 16.6209 9.93851 16.6074 10.7755ZM8.49373 12.1444C7.94513 12.1444 7.36471 11.6173 7.36471 10.7877C7.36471 9.94885 7.95323 9.41192 8.49373 9.41192C9.06038 9.41192 9.63892 9.93712 9.6417 10.7815C9.62517 11.6239 9.05462 12.1444 8.49373 12.1444Z"
-          strokeWidth="1.5"
-        />
-      </svg>
-    ),
-  },
-];

@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sign-up-container {
+  background-color: rgb(240, 242, 246);
+  width: 100vw;
+  height: 100vh;
+  padding: 30px;
+}
+
+.sign-up-container .square {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px -1px rgb(121, 119, 119);
+  display: flex;
+  overflow: hidden;
+}
+.sign-up-container .child_1 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.sign-up-container .column {
+  padding: 30px;
+  flex: 1;
+}
+.sign-up-container .input {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid gray;
+  background-color: rgb(241, 241, 241);
+  outline: none;
+  color: black;
+}
+.sign-up-container .column > div:first-child {
+  font-size: 28px;
+  color: red;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.sign-up-container .style {
+  margin-bottom: 30px;
+}
+.sign-up-container .style > div:first-child {
+  color: rgb(90, 89, 89);
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.sign-up-container .style > div:last-child {
+  background-color: rgb(245, 247, 249);
+  border: 1px solid rgb(200, 198, 198);
+  color: rgb(189, 187, 187);
+  padding: 12px;
+  border-radius: 5px;
+}
+
+.sign-up-container .row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.sign-up-container .row > div:first-child {
+  background-color: rgb(236, 75, 92);
+  width: 30%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+}
+.sign-up-container .row > div:first-child:hover {
+  background-color: rgb(224, 57, 74);
+}
+.sign-up-container .row > div:last-child {
+  color: red;
+  font-size: 18px;
+  width: 30%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-up-container .row_2 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.sign-up-container .child_2 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-up-container img {
+  width: 50%;
+}
+.sign-up-container .content {
+  font-size: 18px;
+}
+.sign-up-container .blu {
+  color: rgb(130, 120, 193);
+}
+.sign-up-container .red {
+  color: rgb(215, 133, 138);
+}
+
+@media (max-width: 768px) {
+  .sign-up-container {
+    display: flex;
+    align-items: center;
+  }
+  .sign-up-container .square {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+  }
+  .sign-up-container .child_2 {
+    display: none;
+  }
+
+  .sign-up-container .style > div:last-child {
+    width: 100%;
+  }
+  .sign-up-container .row {
+    width: 100%;
+  }
+  .sign-up-container .row > div {
+    width: 50% !important ;
+  }
+}
