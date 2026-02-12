@@ -68,7 +68,7 @@ export function Welcome() {
       <div className="introduce">
         <div className="title-introduce">
           <div className="title-1-introduce">
-            <span>Lessons and insights</span>
+            <span>Lessons and insights </span>
             <span>from 8 years</span>
           </div>
           <div>
